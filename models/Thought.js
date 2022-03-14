@@ -9,11 +9,11 @@ const ReactionSchema = new Schema({
     reactionBody: {
         type: String,
         required: true,
-        validate: [({ length }) => length <= 280, 'You have exceeded the maximum amount of characters, 280.']
+        maxlength: 280
     },
     username: {
         type: String,
-        required: 'Username is required',
+        required: true,
     },
     createdAt: {
         type: Date,
@@ -32,8 +32,8 @@ const ThoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
-            required: 'Text entry is required',
-            validate: [({ length }) => length <= 280, 'You have exceeded the maximum amount of characters, 280.']
+            required: true,
+            maxLength: 280
         },
         createdAt: {
             type: Date,
@@ -43,9 +43,9 @@ const ThoughtSchema = new Schema(
         //the user that created this thought
         username: {
             type: String,
-            required: 'Username is required'
+            required: true
         },
-        //like replies
+        //like reactions
         reactions: [ReactionSchema]
     },
     {
@@ -58,3 +58,7 @@ const ThoughtSchema = new Schema(
 ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
+
+const Thought = model('Thought', ThoughtSchema);
+
+module.exports = Thought;

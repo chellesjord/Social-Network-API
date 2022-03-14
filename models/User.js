@@ -38,7 +38,7 @@ const UserSchema = new Schema(
 );
 
 // get total count of friends the users has int the friends array on query
-FriendSchema.virtual('friendCount').get(function () {
+UserSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
 
