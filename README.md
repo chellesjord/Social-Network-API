@@ -19,7 +19,7 @@
   Languages used: JavaScript,ES6,Node 
 
   ## Usage
-  [![application in action](./assets/Social-Network-API.webm)](https://drive.google.com/file/d/1gzEPJP63VIzs4NDr8PWz04KfiJe5gsLA/view)
+  [![application in action](./assets/Social-Network-API.gif)](https://drive.google.com/file/d/1gzEPJP63VIzs4NDr8PWz04KfiJe5gsLA/view)
   
   Watch on [Google Drive](https://drive.google.com/file/d/1gzEPJP63VIzs4NDr8PWz04KfiJe5gsLA/view) 
 
